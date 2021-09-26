@@ -1,6 +1,6 @@
 .basketItem {
   display: flex;
-  padding: 5%;
+  padding: 3%;
 }
 
 .basket__left {
@@ -20,9 +20,18 @@
 }
 
 .remove__btn {
+  cursor: pointer;
   background-color: #f0c14b;
   border: 1px solid;
-  margin-top: 10px;
+  margin-top: 8%;
   border-color: #a88734 #9c7e31 #846a29;
   color: #111;
+  padding: 5px;
+}
+
+.remove__btn:hover {
+  background-color: rgb(179, 175, 175);
+  color: #111;
+
+  opacity: 0.8;
 }

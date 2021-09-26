@@ -1,0 +1,28 @@
+.basketItem {
+  display: flex;
+  padding: 5%;
+}
+
+.basket__left {
+  margin: 2%;
+}
+
+.basket__right {
+  padding: 2%;
+}
+
+.basket__image {
+  max-height: 200px;
+}
+
+.rating {
+  display: flex;
+}
+
+.remove__btn {
+  background-color: #f0c14b;
+  border: 1px solid;
+  margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
+}

@@ -1,6 +1,8 @@
 .basketItem {
   display: flex;
-  padding: 3%;
+  /* padding: 3%; */
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .basket__left {
@@ -8,11 +10,13 @@
 }
 
 .basket__right {
-  padding: 2%;
+  padding-left: 2%;
 }
 
 .basket__image {
-  max-height: 200px;
+  height: 180px;
+  width: 180px;
+  object-fit: contain;
 }
 
 .rating {

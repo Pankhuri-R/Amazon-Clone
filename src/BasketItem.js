@@ -1,32 +1,37 @@
 import React from "react";
 import "./BasketItem.css";
+import { useStateValue } from "./StateProvider";
 
-function BasketItem() {
+function BasketItem({ id, title, image, price, rating }) {
+  const [{ basket }, dispatch] = useStateValue();
+
+  const removeFromBasket = () => {
+    dispatch({
+      type: "REMOVE_FROM_BASKET",
+      id: id,
+    });
+  };
   return (
     <div className="basketItem">
       <div className="basket__left">
-        <img
-          className="basket__image"
-          src="https://images-na.ssl-images-amazon.com/images/I/51T-sMqSMiL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg"
-          alt=""
-        />
+        <img className="basket__image" src={image} alt="" />
       </div>
       <div className="basket__right">
-        <h3>
-          The Lean Startup : How Constant Innovation Creates Radically
-          Successful Businesses PaperBack{" "}
-        </h3>
+        <h3>{title}</h3>
         <p className="item__price">
           <small>$</small>
-          <strong>11.96</strong>
+          <strong>{price}</strong>
         </p>
         <div className="rating">
-          <p>⭐</p>
-          <p>⭐</p>
-          <p>⭐</p>
-          <p>⭐</p>
+          {Array(rating)
+            .fill()
+            .map((_, i) => (
+              <p>⭐</p>
+            ))}
         </div>
-        <button className="remove__btn">Remove From Basket</button>
+        <button onClick={removeFromBasket} className="remove__btn">
+          Remove From Basket
+        </button>
       </div>
     </div>
   );

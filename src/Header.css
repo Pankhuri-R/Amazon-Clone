@@ -35,13 +35,19 @@
   background-color: #cd9842;
 }
 
-.header__nav {
+a {
+  text-decoration: none;
+}
+
+.header__nav,
+a {
   display: flex;
   justify-content: space-evenly;
   color: #fff;
 }
 
-.header__option {
+.header__option,
+a {
   display: flex;
   flex-direction: column;
   /* padding: 1%; */
